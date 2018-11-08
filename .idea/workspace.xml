@@ -4,7 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/assets" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="280e705a-5cde-44e0-af5b-0c4669ac5340" name="Default Changelist" comment="" />
+    <list default="true" id="280e705a-5cde-44e0-af5b-0c4669ac5340" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Service/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/UserService.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +161,7 @@
         <entry file="file://$PROJECT_DIR$/src/Service/UserService.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="367">
-              <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+              <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
               <folding>
                 <element signature="e#30#50#0#PHP" expanded="true" />
               </folding>
@@ -361,7 +363,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/web-server-bundle" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="260" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -422,12 +424,12 @@
       <option name="presentableId" value="Default" />
       <updated>1541512237609</updated>
       <workItem from="1541512242084" duration="9351000" />
-      <workItem from="1541579108547" duration="46796000" />
+      <workItem from="1541579108547" duration="47103000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56147000" />
+    <option name="totallyTimeSpent" value="56454000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -838,7 +840,7 @@
     <entry file="file://$PROJECT_DIR$/src/Service/UserService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
-          <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
           <folding>
             <element signature="e#30#50#0#PHP" expanded="true" />
           </folding>

@@ -41,6 +41,6 @@ class UserService {
             fputcsv($fp, $line, ";");
         }
         fclose($fp);
-        //hello world !
+        
     }
 }
