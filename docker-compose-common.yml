@@ -1,0 +1,45 @@
+version: '2'
+
+services:
+  web:
+    network_mode: "bridge"
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ./bin:/var/www/html/bin
+      - ./config:/var/www/html/config
+      - ./public:/var/www/html/public
+      - ./data:/var/www/html/data
+      - ./src:/var/www/html/src
+      - ./templates:/var/www/html/templates
+      - ./.env:/var/www/html/.env
+      - ./.env.dist:/var/www/html/.env.dist
+      - ./composer.json:/var/www/html/composer.json
+      - ./composer.lock:/var/www/html/composer.lock
+      - ./composer.phar:/var/www/html/composer.phar
+      - ./symfony.lock:/var/www/html/symfony.lock
+        
+    environment:
+      APP_ENV: dev
+      SYMFONY_ENV: dev
+      DATABASE_HOST: 'db'
+      DATABASE_PORT: '3306'
+      DATABASE_NAME: 'formation'
+      DATABASE_USER: 'root'
+      DATABASE_PWD: 'root'
+      DB_USER: 'root'
+      DB_PASSWORD: 'root'
+      DB_ENDPOINT: 'db'
+      DB_PORT: '3306'
+      DB_NAME: 'formation'
+      CORS_ALLOW_ORIGIN: 'http://localhost:4200'
+  db:
+    network_mode: "bridge"
+    image: mysql:5.7.17
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: formation
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root

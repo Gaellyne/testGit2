@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1>Groupes</h1>
+    <a class="btn btn-info" href="/groupe/add" role="button"> <i class="fas fa-plus"></i> Ajouter un groupe</a>
+ 
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Groupe</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody>
+    {% for groupe in groupes %}
+        <tr>
+            <td>{{ groupe.id }}</td>
+            <td>{{ groupe.label }}</td>
+            <td>
+                <a href="/groupe/update/{{ groupe.id }}"><i class="fas fa-pencil-alt"></i></a>
+                <a href="/groupe/delete/{{ groupe.id }}"><i class="fas fa-trash-alt"></i></a>
+                <a href="/user/list/groupe/{{ groupe.id }}"><i class="fas fa-user"></i></a>
+            </td>
+        </tr>
+    {% endfor %}
+        </tbody>
+
+    </table>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        {% endblock %}
+    </head>
+    <body>
+        <div class="container">
+            {% block body %}
+                <div class="row">
+                    <div class="col-12">
+                    <h1>Que voulez-vous faire ?</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Adresses</h5>
+                                <a class="btn btn-info" href="/adresse/list" role="button"> Liste des adresses </a>
+                                <a class="btn btn-info" href="/adresse/add" role="button"> Ajouter une adresse </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Groupes</h5>
+                                <a class="btn btn-info" href="/groupe/list" role="button"> Liste des groupes </a>
+                                <a class="btn btn-info" href="/groupe/add" role="button"> Ajouter un groupe </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Users</h5>
+                                <a class="btn btn-info" href="/user/list" role="button"> Users </a>
+                                <a class="btn btn-info" href="/user/add" role="button"> Ajouter un user </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             {% endblock %}
+        </div>
+        {% block javascripts %}
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        {% endblock %}
+    </body>
+</html>

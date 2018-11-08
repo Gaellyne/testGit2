@@ -1,0 +1,38 @@
+security:
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    providers:
+        in_memory:
+            memory:
+                users:
+                    admin:
+                        password: $2y$10$m0gQaJJ40Y4wPOyT7RVTWeWjRBoZ8xnBmoK8EBbsYbdYN8H.NIFv2
+                        roles: 'ROLE_ADMIN'
+                    user:
+                        password: $2y$10$fdwk5bWCG.rTEaGN0pYN6e1DEz1xHri0L3/ba47CSWZdL5aJ14U.K.NIFv2
+                        roles: 'ROLE_USER'
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: ~
+
+            # activate different ways to authenticate
+
+            http_basic: ~
+            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+
+            # form_login: true
+            # https://symfony.com/doc/current/security/form_login_setup.html
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+        - { path: ^/admin, roles: ROLE_ADMIN }
+        #- { path: ^/profile, roles: ROLE_USER }
+    encoders:
+        #Symfony\Component\Security\Core\User\User: plaintext
+        Symfony\Component\Security\Core\User\User:
+            algorithm: bcrypt
+            cost: 12

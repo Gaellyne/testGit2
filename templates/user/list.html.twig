@@ -1,0 +1,36 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <a href="/user/add"><i class="fas fa-plus"></i></a>
+ 
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>User</td>
+                <td>Email</td>
+                <td>Phone</td>
+                <td>Groupe</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody>
+
+    {% for user in users %}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.firstname }} {{ user.lastname }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.phone }}</td>
+            <td>{{ user.groupe.label }}</td>
+            <td><a href="/user/update/{{ user.id }}"><i class="fas fa-pencil-alt"></i></a>
+                <a href="/user/delete/{{ user.id }}"><i class="fas fa-trash-alt"></i></a>
+                <a href="/user/sendmail">mail</a>
+            </td>
+        </tr>
+    {% endfor %}
+        </tbody>
+
+    </table>
+
+{% endblock %}
